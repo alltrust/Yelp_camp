@@ -25,7 +25,7 @@ const extension = (joi) =>({
 
 const Joi = BaseJoi.extend(extension)
 
-module.exports.campgroundSchema =  Joi.object({ //this is to ensure that you can't get "passed" on the server side as well. Sever validation.
+module.exports.campgroundSchema =  Joi.object({ 
     campground: Joi.object({
         title: Joi.string().required().escapeHTML(),
         price: Joi.number().required().min(0),

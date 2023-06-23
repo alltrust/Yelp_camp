@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const cities = require('./cities')
 const { places, descriptors } = require('./seedHelpers');
-const Campground = require('../models/campground'); // the '..' means you have to back out ONE of the directories because the path is in a seperate directory 
+const Campground = require('../models/campground'); 
 
 main().catch(err => console.log(err));
 
@@ -54,5 +54,5 @@ const seedDB = async () => {
 }
 
 seedDB().then(() => {
-    mongoose.connection.close() // this is how to close to mongoose connection (db)
+    mongoose.connection.close() 
 })
